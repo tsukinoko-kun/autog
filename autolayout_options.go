@@ -40,6 +40,7 @@ var defaultOptions = options{
 		WMedianMaxIter:                           24,
 		NetworkSimplexAuxiliaryGraphWeightFactor: 4,
 		LayerSpacing:                             150.0,
+		NodeVerticalSpacing:                      1.0,
 		NodeSpacing:                              60.0,
 		BrandesKoepfLayout:                       -1,
 	},

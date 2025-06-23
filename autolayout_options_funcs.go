@@ -24,6 +24,12 @@ func WithLayerSpacing(spacing float64) Option {
 	}
 }
 
+func WithNodeVerticalSpacing(spacing float64) Option {
+	return func(o *options) {
+		o.params.NodeVerticalSpacing = spacing
+	}
+}
+
 func WithNodeSpacing(spacing float64) Option {
 	return func(o *options) {
 		o.params.NodeSpacing = spacing

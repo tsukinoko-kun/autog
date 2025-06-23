@@ -48,6 +48,8 @@ type Params struct {
 
 	// Spacing between layers (above and below).
 	LayerSpacing float64
+	// Space between nodes (above and below).
+	NodeVerticalSpacing float64
 	// Spacing between nodes (left and right).
 	NodeSpacing float64
 	// Weight factor for edges in the network simplex positioner.

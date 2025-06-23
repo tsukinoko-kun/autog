@@ -32,15 +32,17 @@ func (alg Alg) Process(g *graph.DGraph, params graph.Params) {
 	default:
 		panic("positioning: unknown alg value")
 	}
-	assignYCoords(g, params.LayerSpacing)
+	assignYCoords(g, params.LayerSpacing, params.NodeVerticalSpacing)
 }
 
-func assignYCoords(g *graph.DGraph, layerSpacing float64) {
+func assignYCoords(g *graph.DGraph, layerSpacing float64, verticalSpacing float64) {
 	y := 0.0
 	for _, l := range g.Layers {
+		line := 0.0
 		for _, n := range l.Nodes {
-			n.Y = y
+			n.Y = y + line
+			line += verticalSpacing
 		}
-		y += l.H + layerSpacing
+		y += l.H + layerSpacing + line
 	}
 }
